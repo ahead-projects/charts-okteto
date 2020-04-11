@@ -140,7 +140,8 @@ master:
   # Use ClusterIP if your setup includes ingress controller
   serviceType: ClusterIP
   # Jenkins master service annotations
-  serviceAnnotations: {}
+  serviceAnnotations:
+    dev.okteto.com/auto-ingress: "true"
   # Jenkins master custom labels
   deploymentLabels: {}
   #   foo: bar
@@ -404,7 +405,7 @@ master:
 agent:
   enabled: true
   image: "jenkins/jnlp-slave"
-  tag: "3.27-1"
+  tag: "alpine"
   customJenkinsLabels: []
   # name of the secret to be used for image pulling
   imagePullSecretName:
