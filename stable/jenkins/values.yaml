@@ -404,8 +404,8 @@ master:
 
 agent:
   enabled: true
-  image: "jenkins/jnlp-slave"
-  tag: "alpine"
+  image: "alpine/jenkins-jnlp-slave"
+  tag: "latest"
   customJenkinsLabels: []
   # name of the secret to be used for image pulling
   imagePullSecretName:
