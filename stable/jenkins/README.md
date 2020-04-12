@@ -46,7 +46,8 @@ Error: Deployment.apps "jenkins" is invalid: spec.selector: Invalid value: v1.La
 In order to upgrade, delete the Jenkins Deployment before upgrading:
 
 ```
-kubectl delete deploy jenkins
+kubectl delete deploy my-jenkins
+helm upgrade --install my-jenkins -f values.yaml .
 ```
 
 
